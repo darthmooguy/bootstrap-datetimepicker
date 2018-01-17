@@ -209,22 +209,22 @@
 
                 return [
                     $('<div>').addClass('datepicker-days')
-                        .append($('<table>').addClass('table table-condensed')
+                        .append($('<table>').addClass('table table-sm table-borderless')
                             .append(headTemplate)
                             .append($('<tbody>'))
                             ),
                     $('<div>').addClass('datepicker-months')
-                        .append($('<table>').addClass('table table-condensed')
+                        .append($('<table>').addClass('table table-sm table-borderless')
                             .append(headTemplate.clone())
                             .append(contTemplate.clone())
                             ),
                     $('<div>').addClass('datepicker-years')
-                        .append($('<table>').addClass('table table-condensed')
+                        .append($('<table>').addClass('table table-sm table-borderless')
                             .append(headTemplate.clone())
                             .append(contTemplate.clone())
                             ),
                     $('<div>').addClass('datepicker-decades')
-                        .append($('<table>').addClass('table table-condensed')
+                        .append($('<table>').addClass('table table-sm table-borderless')
                             .append(headTemplate.clone())
                             .append(contTemplate.clone())
                             )
@@ -283,17 +283,17 @@
                 }
 
                 return $('<div>').addClass('timepicker-picker')
-                    .append($('<table>').addClass('table table-condensed')
+                    .append($('<table>').addClass('table table-sm table-borderless')
                         .append([topRow, middleRow, bottomRow]));
             },
 
             getTimePickerTemplate = function () {
                 var hoursView = $('<div>').addClass('timepicker-hours')
-                        .append($('<table>').addClass('table table-condensed')),
+                        .append($('<table>').addClass('table table-sm table-borderless')),
                     minutesView = $('<div>').addClass('timepicker-minutes')
-                        .append($('<table>').addClass('table table-condensed')),
+                        .append($('<table>').addClass('table table-sm table-borderless')),
                     secondsView = $('<div>').addClass('timepicker-seconds')
-                        .append($('<table>').addClass('table table-condensed')),
+                        .append($('<table>').addClass('table table-sm table-borderless')),
                     ret = [getTimePickerMainTemplate()];
 
                 if (isEnabled('h')) {
@@ -323,7 +323,7 @@
                 if (options.showClose) {
                     row.push($('<td>').append($('<a>').attr({ 'data-action': 'close', 'title': options.tooltips.close }).append($('<span>').addClass(options.icons.close))));
                 }
-                return $('<table>').addClass('table table-condensed').append($('<tbody>').append($('<tr>').append(row)));
+                return $('<table>').addClass('table table-sm table-borderless').append($('<tbody>').append($('<tr>').append(row)));
             },
 
             getTemplate = function () {
@@ -1109,13 +1109,13 @@
                         if (collapseData && collapseData.transitioning) {
                             return;
                         }
-                        if (expanded.collapse) { // if collapse plugin is available through bootstrap.js then use it
-                            expanded.collapse('hide');
-                            closed.collapse('show');
-                        } else { // otherwise just toggle in class on the two views
+                        //if (expanded.collapse) { // if collapse plugin is available through bootstrap.js then use it
+                        //    expanded.collapse('hide');
+                        //    closed.collapse('show');
+                        //} else { // otherwise just toggle in class on the two views
                             expanded.removeClass('in');
                             closed.addClass('in');
-                        }
+                        //}
                         if ($this.is('span')) {
                             $this.toggleClass(options.icons.time + ' ' + options.icons.date);
                         } else {

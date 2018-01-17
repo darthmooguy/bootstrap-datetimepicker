@@ -209,22 +209,22 @@
 
                 return [
                     $('<div>').addClass('datepicker-days')
-                        .append($('<table>').addClass('table-condensed')
+                        .append($('<table>').addClass('table table-condensed')
                             .append(headTemplate)
                             .append($('<tbody>'))
                             ),
                     $('<div>').addClass('datepicker-months')
-                        .append($('<table>').addClass('table-condensed')
+                        .append($('<table>').addClass('table table-condensed')
                             .append(headTemplate.clone())
                             .append(contTemplate.clone())
                             ),
                     $('<div>').addClass('datepicker-years')
-                        .append($('<table>').addClass('table-condensed')
+                        .append($('<table>').addClass('table table-condensed')
                             .append(headTemplate.clone())
                             .append(contTemplate.clone())
                             ),
                     $('<div>').addClass('datepicker-decades')
-                        .append($('<table>').addClass('table-condensed')
+                        .append($('<table>').addClass('table table-condensed')
                             .append(headTemplate.clone())
                             .append(contTemplate.clone())
                             )
@@ -283,17 +283,17 @@
                 }
 
                 return $('<div>').addClass('timepicker-picker')
-                    .append($('<table>').addClass('table-condensed')
+                    .append($('<table>').addClass('table table-condensed')
                         .append([topRow, middleRow, bottomRow]));
             },
 
             getTimePickerTemplate = function () {
                 var hoursView = $('<div>').addClass('timepicker-hours')
-                        .append($('<table>').addClass('table-condensed')),
+                        .append($('<table>').addClass('table table-condensed')),
                     minutesView = $('<div>').addClass('timepicker-minutes')
-                        .append($('<table>').addClass('table-condensed')),
+                        .append($('<table>').addClass('table table-condensed')),
                     secondsView = $('<div>').addClass('timepicker-seconds')
-                        .append($('<table>').addClass('table-condensed')),
+                        .append($('<table>').addClass('table table-condensed')),
                     ret = [getTimePickerMainTemplate()];
 
                 if (isEnabled('h')) {
@@ -323,7 +323,7 @@
                 if (options.showClose) {
                     row.push($('<td>').append($('<a>').attr({ 'data-action': 'close', 'title': options.tooltips.close }).append($('<span>').addClass(options.icons.close))));
                 }
-                return $('<table>').addClass('table-condensed').append($('<tbody>').append($('<tr>').append(row)));
+                return $('<table>').addClass('table table-condensed').append($('<tbody>').append($('<tr>').append(row)));
             },
 
             getTemplate = function () {
@@ -2460,15 +2460,15 @@
         disabledDates: false,
         enabledDates: false,
         icons: {
-            time: 'glyphicon glyphicon-time',
-            date: 'glyphicon glyphicon-calendar',
-            up: 'glyphicon glyphicon-chevron-up',
-            down: 'glyphicon glyphicon-chevron-down',
-            previous: 'glyphicon glyphicon-chevron-left',
-            next: 'glyphicon glyphicon-chevron-right',
-            today: 'glyphicon glyphicon-screenshot',
-            clear: 'glyphicon glyphicon-trash',
-            close: 'glyphicon glyphicon-remove'
+            time: 'fa fa-clock-o',
+            date: 'fa fa-calendar',
+            up: 'fa fa-chevron-up',
+            down: 'fa fa-chevron-down',
+            previous: 'fa fa-chevron-left',
+            next: 'fa fa-chevron-right',
+            today: 'fa fa-crosshairs',
+            clear: 'fa fa-trash',
+            close: 'fa fa-times'
         },
         tooltips: {
             today: 'Go to today',
